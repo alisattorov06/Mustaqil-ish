@@ -41,5 +41,3 @@ Foydalanuvchi mavzuni kiritadi va tizim akademik talabga mos, strukturali hujjat
 Talabalarga vaqtni tejash va sifatli akademik matn olish imkonini berish.
 
 ---
-
-Agar xohlasang, GitHub uchun yanada professional (minimalistik) yoki marketing uslubidagi versiyasini ham tayyorlab beraman.
