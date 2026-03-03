@@ -51,7 +51,7 @@ export async function generatePaper(data: PaperData) {
   `;
 
   const response = await ai.models.generateContent({
-    model: "gemini-3.1-flash-preview",
+    model: "gemini-3-flash-preview",
     contents: prompt,
   });
 
