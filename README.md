@@ -1,20 +1,43 @@
-<div align="center">
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
-</div>
+---
 
-# Run and deploy your AI Studio app
+# 🎓 AI Mustaqil Ish Yozish Platformasi
 
-This contains everything you need to run your app locally.
+Sun’iy intellekt asosida mustaqil ish, referat va ilmiy matnlarni avtomatik generatsiya qiluvchi platforma.
+Foydalanuvchi mavzuni kiritadi va tizim akademik talabga mos, strukturali hujjatni shakllantiradi.
 
-View your app in AI Studio: https://ai.studio/apps/40f20388-844f-43ef-b1ec-8a9ce53da667
+---
 
-## Run Locally
+## 🚀 Demo
 
-**Prerequisites:**  Node.js
+🔗 Demo ko‘rish: `https://mustaqil-ish-liart.vercel.app/`
 
+📸 Platforma ko‘rinishi:
 
-1. Install dependencies:
-   `npm install`
-2. Set the `GEMINI_API_KEY` in [.env.local](.env.local) to your Gemini API key
-3. Run the app:
-   `npm run dev`
+![Platform Screenshot](screenshot.png)
+
+---
+
+## 📌 Imkoniyatlar
+
+* Mavzu asosida avtomatik mustaqil ish yozish
+* Strukturali format (Kirish, Asosiy qism, Xulosa)
+* Akademik uslubda matn generatsiyasi
+* Sarlavha va reja tuzish
+* Tayyor matnni nusxalash yoki yuklab olish
+
+---
+
+## 📝 Ishlash tartibi
+
+1. Mavzuni kiriting
+2. Kerakli hajm yoki talabni belgilang
+3. “Generatsiya qilish” tugmasini bosing
+4. Tayyor mustaqil ishni oling
+
+---
+
+## 🎯 Maqsad
+
+Talabalarga vaqtni tejash va sifatli akademik matn olish imkonini berish.
+
+---
