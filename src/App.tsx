@@ -96,7 +96,9 @@ export default function App() {
   const handleDownloadDocx = async () => {
     if (!generatedContent) return;
 
-    const lines = generatedContent.split('\n');
+    // Remove page break markers for Word export
+    const cleanContent = generatedContent.replace(/\[SAHIFA_YAKUNI\]/g, '');
+    const lines = cleanContent.split('\n');
     const children = [];
 
     for (const line of lines) {
@@ -524,16 +526,35 @@ export default function App() {
               </div>
 
               {/* A4 Document Preview */}
+              <div className="max-w-[210mm] mx-auto space-y-8 no-print">
+                {generatedContent?.split('[SAHIFA_YAKUNI]').map((page, index) => (
+                  <div 
+                    key={index}
+                    style={{ 
+                      fontSize: `${fontSize}pt`, 
+                      lineHeight: lineSpacing,
+                      fontFamily: fontFamily === 'Times New Roman' ? '"Times New Roman", Times, serif' : 'inherit'
+                    }}
+                    className="bg-white shadow-2xl p-[20mm] md:p-[30mm] print-container min-h-[297mm] whitespace-pre-wrap text-justify relative"
+                  >
+                    {page.trim()}
+                    <div className="absolute bottom-4 right-8 text-[10px] text-stone-400 font-mono no-print">
+                      Sahifa {index + 1}
+                    </div>
+                  </div>
+                ))}
+              </div>
+
+              {/* Print-only View (No page breaks for browser print to handle naturally) */}
               <div 
-                ref={resultRef}
                 style={{ 
                   fontSize: `${fontSize}pt`, 
                   lineHeight: lineSpacing,
                   fontFamily: fontFamily === 'Times New Roman' ? '"Times New Roman", Times, serif' : 'inherit'
                 }}
-                className="max-w-[210mm] mx-auto bg-white shadow-2xl p-[20mm] md:p-[30mm] print-container min-h-[297mm] whitespace-pre-wrap text-justify"
+                className="hidden print:block whitespace-pre-wrap text-justify"
               >
-                {generatedContent}
+                {generatedContent?.replace(/\[SAHIFA_YAKUNI\]/g, '')}
               </div>
             </motion.div>
           )}

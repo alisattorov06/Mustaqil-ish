@@ -26,14 +26,19 @@ export async function generatePaper(data: PaperData) {
     Muallif haqida ma'lumot: ${data.authorInfo}
     Annotatsiya: ${data.abstract}
     Kalit so'zlar: ${data.keywords}
-    Sahifalar soni: ${data.pageCount} sahifa (Har bir sahifa taxminan 300-400 so'zdan iborat bo'lishi kerak)
+    Sahifalar soni: ${data.pageCount} sahifa.
+    Har bir sahifa kamida 400-500 ta so'zdan iborat bo'lishi shart.
+    Jami so'zlar soni taxminan ${data.pageCount * 450} ta bo'lishi kerak.
+    
+    MUHIM: Har bir sahifa yakunida [SAHIFA_YAKUNI] belgisini qo'ying. Bu bizga sahifalarni ajratishga yordam beradi.
+    
     Reja:
     ${data.plans.map((p, i) => `${i + 1}. ${p}`).join('\n')}
     
     MUHIM TALABLAR:
     1. FAQAT ODDIY MATN (PLAIN TEXT) QAYTARILSIN. Markdown belgilari (#, ##, **, _, [ ], etc.) va HTML elementlarini ISHLATMANG.
     2. Sarlavhalarni katta harflar bilan va alohida qatorda yozing (masalan: KIRISH, ASOSIY QISM, XULOSA).
-    3. Hujjat hajmi ${data.pageCount} sahifaga mos bo'lishi uchun matnni yetarlicha kengaytiring. Har bir reja bandi bo'yicha batafsil va ilmiy tahliliy ma'lumot bering.
+    3. Hujjat hajmi ${data.pageCount} sahifaga mos bo'lishi uchun matnni MAKSIMAL darajada kengaytiring. Har bir reja bandi bo'yicha juda batafsil, ilmiy va tahliliy ma'lumot bering. Agar matn kam bo'lsa, talab bajarilmagan hisoblanadi.
     4. Hujjat tarkibi:
        - Sarlavha (Mavzu, talaba va fan ma'lumotlari)
        - Annotatsiya va Kalit so'zlar
